@@ -19,6 +19,7 @@
 #include "stdafx.h"
 #include<stdlib.h>  //malloc(),free()函数需要的头文件
 #include<math.h>
+#include<windows.h>  //包含时钟头文件
 #include <opencv2/opencv.hpp>
 using namespace std;
 using namespace cv;
@@ -107,7 +108,7 @@ void GaussBlur(unsigned char*  pixels, unsigned int    width, unsigned int  heig
 int _tmain(int argc, _TCHAR* argv[])
 {
 	
-	 const char* imagename = "emosue.jpg";
+	 const char* imagename = "D:\\传统高斯滤波\\GaussianBlur\\GaussianBlur\\测试图像\\128128.jpg";
     //从文件中读入图像
     Mat img = imread(imagename);
 	Mat dst = imread(imagename);
@@ -117,7 +118,23 @@ int _tmain(int argc, _TCHAR* argv[])
         fprintf(stderr, "Can not load image %s\n", imagename);
         return -1;
     }
-	GaussBlur(img.data,img.cols,img.rows,3,3.33);
+	LARGE_INTEGER m_nFreq;
+    LARGE_INTEGER m_nBeginTime;
+    LARGE_INTEGER nEndTime;
+    QueryPerformanceFrequency(&m_nFreq); // 获取时钟周期
+    QueryPerformanceCounter(&m_nBeginTime); // 获取时钟计数
+	//DWORD start_time=GetTickCount();  
+	 for(int i=0;i<10;i++)
+	 {
+	GaussBlur(img.data,img.cols,img.rows,3,1);
+	//DWORD end_time=GetTickCount();  
+    //cout<<"The run time is:"<<(end_time-start_time)<<"ms!"<<endl;//输出运行时间  
+	 }
+
+	 QueryPerformanceCounter(&nEndTime);
+	 
+	
+     cout << (nEndTime.QuadPart-m_nBeginTime.QuadPart)*100/m_nFreq.QuadPart << endl;
     //显示图像
 	imshow("原图像",dst);
     imshow("模糊图像", img);

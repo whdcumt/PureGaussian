@@ -1,0 +1,27 @@
+﻿生成启动时间为 2016/6/30 6:19:44。
+     1>项目“D:\传统高斯滤波\GaussianBlur\GaussianBlur\GaussianBlur.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\GaussianBlur.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         D:\Program files\VS2010\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\GaussianBlur.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GaussianBlur.cpp
+         GaussianBlur.cpp
+     1>GaussianBlur.cpp(39): warning C4244: “+=”: 从“double”转换到“float”，可能丢失数据
+     1>GaussianBlur.cpp(45): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>GaussianBlur.cpp(56): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+       Link:
+         D:\Program files\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\传统高斯滤波\GaussianBlur\Release\GaussianBlur.exe" /INCREMENTAL:NO /NOLOGO opencv_calib3d247.lib opencv_contrib247.lib opencv_core247.lib opencv_features2d247.lib opencv_flann247.lib opencv_gpu247.lib opencv_highgui247.lib opencv_imgproc247.lib opencv_legacy247.lib opencv_ml247.lib opencv_nonfree247.lib opencv_objdetect247.lib opencv_ocl247.lib opencv_photo247.lib opencv_stitching247.lib opencv_superres247.lib opencv_ts247.lib opencv_video247.lib opencv_videostab247.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\GaussianBlur.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\传统高斯滤波\GaussianBlur\Release\GaussianBlur.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\传统高斯滤波\GaussianBlur\Release\GaussianBlur.lib" /MACHINE:X86 Release\GaussianBlur.obj
+         Release\stdafx.obj
+         正在生成代码
+         已完成代码的生成
+         GaussianBlur.vcxproj -> D:\传统高斯滤波\GaussianBlur\Release\GaussianBlur.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\传统高斯滤波\GaussianBlur\Release\GaussianBlur.exe;#1" /manifest Release\GaussianBlur.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\GaussianBlur.unsuccessfulbuild”。
+         正在对“Release\GaussianBlur.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\传统高斯滤波\GaussianBlur\GaussianBlur\GaussianBlur.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.78
